@@ -1,0 +1,203 @@
+﻿@model kaitoss.ViewModel.IndexVM
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- ===== service-area start ===== -->
+<section id="services" class="services-area services-eight">
+    <!--======  Start Section Title Five ======-->
+    <div class="section-title-five">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="content">
+                        <h6>Services</h6>
+                        <h2 class="fw-bold">Our Best Services</h2>
+                        <p>
+                            There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!--======  End Section Title Five ======-->
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model.Services)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <div class="service-icon">
+                            <i class="lni lni-capsule"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4>@item.Title</h4>
+                            <p>
+                                @item.Details .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+<!-- ===== service-area end ===== -->
+<!-- Start Latest News Area -->
+<div id="blog" class="latest-news-area section" style="background-color: #e1e1e1;">
+    <!--======  Start Section Title Five ======-->
+    <div class="section-title-five">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="content">
+                        <h6>latest news</h6>
+                        <h2 class="fw-bold">Latest News & Blog</h2>
+                        <p>
+                            There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!--======  End Section Title Five ======-->
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model.Blogs)
+            {
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Single News -->
+                <div class="single-news">
+                        <div class="image">
+                            <a href="javascript:void(0)"><img class="thumb" src="~/images/@item.Logo" alt="Blog" /></a>
+                            <div class="meta-details">
+                                <img class="thumb" src="~/assets/images/blog/b6.jpg" alt="Author" />
+                                <span>@item.AppUser.FirstName</span>
+                            </div>
+                        </div>
+                        <div class="content-body">
+                            <h4 class="title">
+                                <a href="javascript:void(0)"> @item.Title </a>
+                            </h4>
+                            <p>
+                                @item.Details
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single News -->
+            </div>
+            }
+
+
+        </div>
+    </div>
+</div>
+<!-- End Latest News Area -->
+<!-- ========================= contact-section start ========================= -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="contact-item-wrapper">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-xl-12">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="lni lni-phone"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <h4>Contact</h4>
+                                    <p>@Model.Settings.phone</p>
+                                    <p>@Model.Settings.Email</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-12">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="lni lni-map-marker"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <h4>Address</h4>
+                                    <p>@Model.Settings.Address</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-12">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="lni lni-alarm-clock"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <h4>Schedule</h4>
+                               
+                                    <p>@Model.Settings.Schedule</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8">
+                <div class="contact-form-wrapper">
+                    <div class="row">
+                        <div class="col-xl-10 col-lg-8 mx-auto">
+                            <div class="section-title text-center">
+                                <span> Get in Touch </span>
+                                <h2>
+                                    Ready to Get Started
+                                </h2>
+                                <p>
+                                    At vero eos et accusamus et iusto odio dignissimos ducimus
+                                    quiblanditiis praesentium
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <form asp-action="ContactUs" method="post" class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" asp-for="ContactUs.Name" placeholder="Name" required />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" asp-for="ContactUs.Email" placeholder="Email" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" asp-for="ContactUs.Phone" placeholder="Phone" required />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" asp-for="ContactUs.Subject" placeholder="Subject" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <textarea asp-for="ContactUs.Message" placeholder="Type Message" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="button text-center rounded-buttons">
+                                    <button type="submit" class="btn primary-btn rounded-full">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

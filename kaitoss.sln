@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kaitoss", "kaitoss\kaitoss.csproj", "{E33B5857-2B41-4DAF-BD71-9B285D2197C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kaitoss.Data", "kaitoss.Data\kaitoss.Data.csproj", "{9D2A1600-F882-4A53-91DB-7B50B4B76E50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E33B5857-2B41-4DAF-BD71-9B285D2197C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E33B5857-2B41-4DAF-BD71-9B285D2197C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E33B5857-2B41-4DAF-BD71-9B285D2197C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E33B5857-2B41-4DAF-BD71-9B285D2197C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D2A1600-F882-4A53-91DB-7B50B4B76E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D2A1600-F882-4A53-91DB-7B50B4B76E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D2A1600-F882-4A53-91DB-7B50B4B76E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D2A1600-F882-4A53-91DB-7B50B4B76E50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F83A5F7-EF8F-4900-B866-40A14BBFA146}
+	EndGlobalSection
+EndGlobal
