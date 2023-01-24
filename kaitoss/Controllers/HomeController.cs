@@ -27,16 +27,15 @@ namespace kaitoss.Controllers
             };
             return View(index);
         }
+        [HttpPost]
         public async Task<IActionResult> ContactUs(ContactUs model)
         {
-            if (ModelState.IsValid)
-            {
+        
                await _contet.ContactUs.AddAsync(model);
                 await _contet.SaveChangesAsync();
-                return RedirectToAction("Index");
-            }
-            return View();
+                return Redirect("/Home/Index");
         }
+        
 
         public IActionResult Privacy()
         {
